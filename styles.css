@@ -138,7 +138,7 @@ li figure{
 } */
 
 .childs{
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     width: 100%;
     min-heigth: 100vh;
     height: 100vh;
@@ -399,7 +399,7 @@ h1{
     position: absolute;
     opacity: 0;
     z-index: 0;
-    transition: opacity 3s ease;
+    transition: opacity 1s ease;
 }
 
 .active{
