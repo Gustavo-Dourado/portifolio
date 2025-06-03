@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 :root{
-    --bg-hero: url("./assets/bg-capa-dark.jpg");
-    --bg-content: url("./assets/bg-image-dark.jpg");
+    --bg-hero: url("./assets/bg_hero_medium.jpg");
+    --bg-content: url("./assets/bg_content_dark_large.jpg");
     --text-color: #fff;
     --shadow-text: rgba(48,48,48,0.4);
     --change-style-mode-to: light;
@@ -149,10 +149,18 @@ li figure{
 }
 
 .sections{  
-    background-image: var(--bg-content); 
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background: #403A3E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #BE5869, #403A3E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #BE5869, #403A3E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
 }
 
 #hero-section{
@@ -162,8 +170,8 @@ li figure{
     padding-top: 40vh;
     padding-bottom: 5rem;
 
-    background-image: var(--bg-hero);
-    background-position: 50% 40%;
+    background: var(--bg-hero);
+    background-position: 50% 60%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -549,10 +557,7 @@ textarea{
 footer{
     width: 100%;
     height: 8rem;
-    background-image: var(--bg-content);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgb(147, 108, 108);
     font-size: 1.2rem;
 }
 
