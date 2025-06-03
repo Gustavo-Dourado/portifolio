@@ -1,17 +1,5 @@
 import {arrayProjectsPortifolio} from "./modules/projects-array.js";
 
-//ATIVAR ESSA PARTE QUANDO FOR FAZER O LIGHT MODE
-
-//Seleciona o html para modificar o estilo de dark para light
-    // const html = document.documentElement
-
-    // const mode = document.getElementById('mode');
-    // mode.addEventListener('click', handleClickMode)
-
-    // function handleClickMode(){
-    //     html.classList.toggle('light');
-    // }
-
 //Seleciona todos os botões do header
     const sobreMimButton = document.getElementById('about-me');
     const projetosButton = document.getElementById('projects');

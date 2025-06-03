@@ -5,18 +5,7 @@
     --bg-content: url("./assets/bg_content_dark_large.jpg");
     --text-color: #fff;
     --shadow-text: rgba(48,48,48,0.4);
-    --change-style-mode-to: light;
 }
-
-/* ATIVAR ESSA PARTE QUANDO FOR FAZER O LIGHT MODE
-
-.light{
-    --bg-hero: url("./assets/bg-capa-light.jpg");
-    --bg-content: url("./assets/bg-image-light.jpg");
-    --text-color: #404040;
-    --shadow-text: rgba(169,169,169,0.4);
-    --change-style-mode-to: dark;
-} */
 
 *{
     margin: 0;
@@ -27,7 +16,6 @@
 }
 
 html{
-    scroll-snap-type: y proximity;
     font-size: 62.5%;  
 }
 
@@ -106,7 +94,6 @@ li figure{
     max-width: 60rem;
     display: flex;
     justify-content: space-between;
-
 }
 
 .social-header-links{
@@ -121,27 +108,10 @@ li figure{
     width: 3.2rem;
     height: 3.2rem;
 }
-/* ATIVAR ESSA PARTE QUANDO FOR FAZER O LIGHT MODE
-#mode{
-    position: relative;
-    left: 100px;
-    cursor: pointer;
-    animation: var(--change-style-mode-to) 2s infinite;
-}
-
-@keyframes dark{
-    100% {transform: rotate(360deg)}
-}
-
-@-webkit-keyframes dark{
-    100% {transform: rotate(360deg)}
-} */
 
 .childs{
-    /* scroll-snap-align: start; */
     width: 100%;
-    min-heigth: 100vh;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,32 +119,27 @@ li figure{
 }
 
 .sections{  
-background: #1D4350;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-background: #403A3E;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #BE5869, #403A3E);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #BE5869, #403A3E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-
-
+    background: #403A3E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BE5869, #403A3E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BE5869, #403A3E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #hero-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40vh;
     padding-bottom: 5rem;
-
     background: var(--bg-hero);
     background-position: 50% 60%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#hero-div-container{
+    width: 100%;
+    height: calc(100% - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1{
@@ -661,6 +626,10 @@ footer{
 }
 
 @media(max-width: 550px){
+    #hero-section{
+        background-image: url("./assets/bg_hero_small.jpg");
+    }
+
     .wrapper-menu-nav{
         display: none;
     }
