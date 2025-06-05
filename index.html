@@ -10,21 +10,22 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav-container">
             <ul class="simbolo-menu-container">
                 <li>
-                    <figure>
-                        <img id="menu-icon" alt="menu-icon" src="./assets/menu-hamburguer-dark.png"/>
+                    <figure id="menu-mobile-button">
+                        <img id="menu-icon" alt="menu-icon" src="./assets/menu-hamburguer.png"/>
                         <figcaption>Menu</figcaption>
                     </figure>
                 </li>
             </ul>
+            
             <div class="wrapper-menu-nav">
                 <ul class="menu-nav">
-                    <li class="none" id="about-me">Sobre Mim</li>
-                    <li class="none" id="projects">Projetos</li>
-                    <li class="none" id="technologies">Tecnologias</li>
-                    <li class="none" id ="contact">Contato</li>
+                    <li id="about-me">Sobre Mim</li>
+                    <li id="projects">Projetos</li>
+                    <li id="technologies">Tecnologias</li>
+                    <li id ="contact">Contato</li>
                 </ul>
             </div>
 
@@ -46,6 +47,17 @@
 
     </header>
 
+    <section class="menu-mobile" id="menu-mobile-modal">
+        <nav class="nav-mobile">
+            <ul class="menu-nav-mobile">
+                <li id="about-me-mobile">Sobre Mim</li>
+                <li id="projects-mobile">Projetos</li>
+                <li id="technologies-mobile">Tecnologias</li>
+                <li id ="contact-mobile">Contato</li>
+            </ul>
+        </nav>
+    </section>
+
     <section class="childs" id="hero-section">
         <div id="hero-div-container">
             <h1>Procurando Desenvolvedor Fullstack?</h1>
@@ -59,170 +71,174 @@
     </section>
 
     <section class="childs sections" id="about-me-section">
-
-        <svg class="arrows left-side">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
-
-        <div class="profile-container">         
-            <div class="profile-card">
-                <div class="wrapper-profile-content flex column align-center gap-20">
-                    <div class="wrapper-profile-image flex column align-center">
-                        <img class="profile-image" alt="foto de perfil Gustavo Dourado" src="./assets/about-me/perfil_linkedin.jpeg"/>
-                        <p class="name-text">Gustavo Dourado</p>
-                    </div>
-                    
-                    <div class="wrapper-profile-text flex column align-center">
-                        <p class="profile-text">
-                            Foco e determinação.
-                            Pronto para te entregar o melhor resultado!
-                        </p>
-                        <div class="social-text">
-                            Visite minhas redes sociais
-                            <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFF"><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+        <div class="main-container">
+            <svg class="arrows left-side">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+            
+            <div class="profile-container">         
+                <div class="profile-card">
+                    <div class="wrapper-profile-content flex column align-center gap-20">
+                        <div class="wrapper-profile-image flex column align-center">
+                            <img class="profile-image" alt="foto de perfil Gustavo Dourado" src="./assets/about-me/perfil_linkedin.jpeg"/>
+                            <p class="name-text">Gustavo Dourado</p>
+                        </div>
+                        
+                        <div class="wrapper-profile-text flex column align-center">
+                            <p class="profile-text">
+                                Foco e determinação.
+                                Pronto para te entregar o melhor resultado!
+                            </p>
+                            <div class="social-text">
+                                Visite minhas redes sociais
+                                <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFF"><path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z"/></svg>
+                            </div>
                         </div>
                     </div>
+                    <div class="divider"></div>
+                    <div class="icons-container">
+                        <a href="http://www.linkedin.com/in/gustavo-nascimento-dourado" target="_blank">
+                            <figure class="icon-box">
+                                <img class="icon-item" src="./assets//about-me/linkedin-flaticon.png"/>                           
+                                <figcaption>Linkedin</figcaption>
+                            </figure>
+                        </a>
+                        <a href="https://www.github.com/Gustavo-Dourado" target="_blank">                          
+                            <figure class="icon-box">
+                                <img class="icon-item" src="./assets/about-me/github-icon.png" />
+                                <figcaption>GitHub</figcaption>
+                            </figure>
+                        </a>
+                    </div>
                 </div>
-                <div class="divider"></div>
-                <div class="icons-container">
-                    <a href="http://www.linkedin.com/in/gustavo-nascimento-dourado" target="_blank">
-                        <figure class="icon-box">
-                            <img class="icon-item" src="./assets//about-me/linkedin-flaticon.png"/>                           
-                            <figcaption>Linkedin</figcaption>
-                        </figure>
-                    </a>
-                    <a href="https://www.github.com/Gustavo-Dourado" target="_blank">                          
-                        <figure class="icon-box">
-                            <img class="icon-item" src="./assets/about-me/github-icon.png" />
-                            <figcaption>GitHub</figcaption>
-                        </figure>
-                    </a>
-                </div>
+                
+                
+                <p class="profile-sinopse">
+                    Sou formado em Engenharia Química, com experiência em liderança de equipes e elaboração de relatórios estratégicos voltados à melhoria de processos e atendimento ao cliente. Após cinco anos atuando no setor de tratamento de água, iniciei minha transição para a área de tecnologia, onde descobri minha verdadeira paixão.
+                    Concluí um curso livre como desenvolvedor full stack com foco em JavaScript e Node.js, aprendendo a criar aplicações web responsivas e modernas. Atualmente, curso graduação em Análise e Desenvolvimento de Sistemas para aprofundar meus conhecimentos e construir uma carreira sólida em tecnologia, sempre com foco em aprendizado contínuo e evolução profissional.
+                    Atualmente domino linguagens e ferramentas como: HTML. CSS, Javascript, React, NodeJs, Express, MySQL, MariaDB, PostgreSQL, Git.
+                </p>
             </div>
             
-
-            <p class="profile-sinopse">
-                Sou formado em Engenharia Química, com experiência em liderança de equipes e elaboração de relatórios estratégicos voltados à melhoria de processos e atendimento ao cliente. Após cinco anos atuando no setor de tratamento de água, iniciei minha transição para a área de tecnologia, onde descobri minha verdadeira paixão.
-                Concluí um curso livre como desenvolvedor full stack com foco em JavaScript e Node.js, aprendendo a criar aplicações web responsivas e modernas. Atualmente, curso graduação em Análise e Desenvolvimento de Sistemas para aprofundar meus conhecimentos e construir uma carreira sólida em tecnologia, sempre com foco em aprendizado contínuo e evolução profissional.
-                Atualmente domino linguagens e ferramentas como: HTML. CSS, Javascript, React, NodeJs, Express, MySQL, MariaDB, PostgreSQL, Git.
-            </p>
+            <svg class="arrows right-side">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>     
         </div>
-
-        <svg class="arrows right-side">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>     
     </section>
 
     <section class="childs sections" id="projects-section">
-        
-        <svg class="arrows left-side">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
+        <div class="main-container">
+            <svg class="arrows left-side">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
 
-        <div class="main-container-projects">
-            <h2>Principais Projetos Desenvolvidos</h2>
-            
-            <div class="view-projects">
-                <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m309.67-81.33-61-61.67L587-481.33 248.67-819.67l61-61.66 400 400-400 400Z"/></svg>
+            <div class="main-container-projects">
+                <h2>Principais Projetos Desenvolvidos</h2>
 
-                <div class="projects-container" id="projects-container"></div>
-                               
-                <svg class="forward-arrow" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m309.67-81.33-61-61.67L587-481.33 248.67-819.67l61-61.66 400 400-400 400Z"/></svg>
-
-                <div class="wrapper-arrows-responsive">
+                <div class="view-projects">
                     <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m309.67-81.33-61-61.67L587-481.33 248.67-819.67l61-61.66 400 400-400 400Z"/></svg>
+                    
+                    <div class="projects-container" id="projects-container"></div>
+                    
                     <svg class="forward-arrow" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m309.67-81.33-61-61.67L587-481.33 248.67-819.67l61-61.66 400 400-400 400Z"/></svg>
+
+                    <div class="wrapper-arrows-responsive">
+                        <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m309.67-81.33-61-61.67L587-481.33 248.67-819.67l61-61.66 400 400-400 400Z"/></svg>
+                        <svg class="forward-arrow" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m309.67-81.33-61-61.67L587-481.33 248.67-819.67l61-61.66 400 400-400 400Z"/></svg>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <svg class="arrows right-side">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
+            <svg class="arrows right-side">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+        </div>
     </section>
 
     <section class="childs sections" id="technologies-section">
+        <div class="main-container">
+            <svg class="arrows left-side">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
 
-        <svg class="arrows left-side">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
+            <div class="main-container-technologies">
+                <h2>Principais Tecnologias</h2>
 
-        <div class="main-container-technologies">
-            <h2>Principais Tecnologias</h2>
-            
-            <div id="view-container-technologies"></div>
+                <div id="view-container-technologies"></div>
+            </div>
+
+            <svg class="arrows right-side">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
         </div>
-
-        <svg class="arrows right-side">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
     </section>
 
     <section class="childs sections" id="contact-section">
+        <div class="main-container">
+            <svg class="arrows left-side">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
 
-        <svg class="arrows left-side">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
+            <form
+                action="https://formspree.io/f/mrbglvlr"
+                method="POST"
+                novalidate
+                >       
+                    <h3>Entre em contato. Conte comigo para te ajudar!</h3>
+                    <fieldset class="fieldset" id="name-field">
+                        <label for="name">Nome
+                            <input type="text" id="name" name="name" placeholder="Seu nome aqui">
+                        </label>
 
-        <form
-            action="https://formspree.io/f/mrbglvlr"
-            method="POST"
-            novalidate
-            >       
-                <h3>Entre em contato. Conte comigo para te ajudar!</h3>
-                <fieldset class="fieldset" id="name-field">
-                    <label for="name">Nome
-                        <input type="text" id="name" name="name" placeholder="Seu nome aqui">
-                    </label>
-                    
-                    <p class="input-error" id="name-error"></p>
-                </fieldset>
+                        <p class="input-error" id="name-error"></p>
+                    </fieldset>
 
-                <fieldset class="fieldset" id="phone-field">
-                    <label for="phone">Telefone
-                        <input type="number" id="phone" name="phone" min="0" placeholder="Telefone com DDD, somente números (Ex: 071999999999)">
-                    </label>
-                    
-                    <p class="input-error" id="phone-error"></p>
-                </fieldset>
-                
-                <fieldset class="fieldset" id="email-field">
-                    <label for="email">Email
-                        <input type="email" name="email" id="email" placeholder="Seu email aqui">
-                    </label>
-                    
-                    <p class="input-error" id="email-error"></p>
-                </fieldset>
+                    <fieldset class="fieldset" id="phone-field">
+                        <label for="phone">Telefone
+                            <input type="number" id="phone" name="phone" min="0" placeholder="Telefone com DDD, somente números (Ex: 071999999999)">
+                        </label>
 
-                <fieldset class="fieldset" id="message-field">
-                    <label for="message">Mensagem
-                        <textarea name="message" id="message" placeholder="Digite aqui sua mensagem..."></textarea>
-                    </label>
-                    
-                    <p class="input-error" id="message-error"></p>
-                </fieldset>
-            <button type="submit" id="send">Enviar</button>
-        </form>
+                        <p class="input-error" id="phone-error"></p>
+                    </fieldset>
 
-        <svg class="arrows right-side">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
+                    <fieldset class="fieldset" id="email-field">
+                        <label for="email">Email
+                            <input type="email" name="email" id="email" placeholder="Seu email aqui">
+                        </label>
+
+                        <p class="input-error" id="email-error"></p>
+                    </fieldset>
+
+                    <fieldset class="fieldset" id="message-field">
+                        <label for="message">Mensagem
+                            <textarea name="message" id="message" placeholder="Digite aqui sua mensagem..."></textarea>
+                        </label>
+
+                        <p class="input-error" id="message-error"></p>
+                    </fieldset>
+                <button type="submit" id="send">Enviar</button>
+            </form>
+
+            <svg class="arrows right-side">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+        </div>
     </section>
 
     <footer>

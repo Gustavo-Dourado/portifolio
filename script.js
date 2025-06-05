@@ -6,17 +6,38 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
     const tecnologiasButton = document.getElementById('technologies');
     const contatoButton = document.getElementById('contact');
 
+//Seleciona o botao do menu mobile
+    const menuMobileButton = document.getElementById('menu-mobile-button');
+    //Seleciona o modal do menu mobile
+    const modalMenuMobile = document.getElementById('menu-mobile-modal');
+
+//Seleciona todos os botões do menu mobile para navegação
+    const sobreMimButtonMobile = document.getElementById('about-me-mobile');
+    const projetosButtonMobile = document.getElementById('projects-mobile');
+    const tecnologiasButtonMobile = document.getElementById('technologies-mobile');
+    const contatoButtonMobile = document.getElementById('contact-mobile');
+
 //seleciona todas as sessões para navegação
     const sobreMimSection = document.getElementById('about-me-section');
     const projetosSection = document.getElementById('projects-section');
     const tecnologiasSection = document.getElementById('technologies-section');
     const contatoSection = document.getElementById('contact-section');
 
+//Abre Modal do menu mobile
+    menuMobileButton.addEventListener('click', () => {modalMenuMobile.style.display = 'block'})
+
 //Cria navegação ao clicar nos respectivos botões do header
     sobreMimButton.addEventListener('click', () => {sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+    sobreMimButtonMobile.addEventListener('click', () => {sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+
     projetosButton.addEventListener('click', () => {projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+    projetosButtonMobile.addEventListener('click', () => {projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+
     tecnologiasButton.addEventListener('click', () => {tecnologiasSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+    tecnologiasButtonMobile.addEventListener('click', () => {tecnologiasSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+
     contatoButton.addEventListener('click', () => {contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+    contatoButtonMobile.addEventListener('click', () => {contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
 
 //Mantém o botão com a coloração de destaque na seção que estiver sendo exibida na tela
     sobreMimSection.addEventListener('mouseover', () =>{sobreMimButton.classList.toggle('is-focus')})
@@ -124,11 +145,15 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
 
     //Pega as setas para navegar entre projetos
     const backButton = document.getElementsByClassName("back-arrow")[0]
+    const backButtonMobile = document.getElementsByClassName("back-arrow")[1]
     const forwardButton = document.getElementsByClassName("forward-arrow")[0]
+    const forwardButtonMobile = document.getElementsByClassName("forward-arrow")[1]
 
     //Aciona funcao para navegar entre projetos ao clicar nos botões
     backButton.addEventListener('click', () => checkNextProject(-1))
+    backButtonMobile.addEventListener('click', () => checkNextProject(-1))
     forwardButton.addEventListener('click', () => checkNextProject(1))
+    forwardButtonMobile.addEventListener('click', () => checkNextProject(1))
 
     //Verifica o próximo projeto a ser mostrado, caso já esteja mostrando o último ou primeiro projeto, ele continua o ciclo voltando para o primeiro ou último projeto
     function checkNextProject(increment){
@@ -141,12 +166,12 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
         nextProject += increment
     }
     
-    ProjectToggle(actualProject, nextProject)
+    projectToggle(actualProject, nextProject)
     //Reatribui o next como actual project
     actualProject = nextProject;
     }
 
-    function ProjectToggle(actualProject, nextProject){
+    function projectToggle(actualProject, nextProject){
     //Remove classe ativa do projeto atual
         document.getElementById(`project-${actualProject}`).classList.toggle("active");
     //Adiciona classe ativa do proximo porjeto
