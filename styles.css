@@ -98,6 +98,10 @@ li figure{
     display: none;
 }
 
+.open{
+    display: block;
+}
+
 .menu-nav-mobile{
     display: flex;
     flex-direction: column;

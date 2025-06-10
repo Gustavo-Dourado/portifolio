@@ -1,11 +1,14 @@
 import {arrayProjectsPortifolio} from "./modules/projects-array.js";
 
-//Seleciona todos os botões do header
+//Pegar o elemento body
+    const bodyElement = document.getElementsByTagName('body');
+    
+    //Seleciona todos os botões do header
     const sobreMimButton = document.getElementById('about-me');
     const projetosButton = document.getElementById('projects');
     const tecnologiasButton = document.getElementById('technologies');
     const contatoButton = document.getElementById('contact');
-
+    
 //Seleciona o botao do menu mobile
     const menuMobileButton = document.getElementById('menu-mobile-button');
     //Seleciona o modal do menu mobile
@@ -24,32 +27,34 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
     const contatoSection = document.getElementById('contact-section');
 
 //Abre Modal do menu mobile
-    menuMobileButton.addEventListener('click', () => {modalMenuMobile.style.display = 'block'})
+    menuMobileButton.addEventListener('click', (e) => {
+        e.stopPropagation() 
+        modalMenuMobile.classList.toggle('open')
+    })
+
+//Fechar MenuMobile
+    modalMenuMobile.addEventListener('click', () => modalMenuMobile.classList.toggle('open')) //Fechar ao clicar em qlqr lugar da seção modal
+    //Fechar modal ao clicar em qualquer lugar do body, caso o menu esteja aberto
+    bodyElement[0].addEventListener('click', (e) => {
+        e.stopPropagation()
+        if(modalMenuMobile.classList.contains('open')){
+            modalMenuMobile.classList.remove('open')
+        }
+    })
+    
 
 //Cria navegação ao clicar nos respectivos botões do header
-    sobreMimButton.addEventListener('click', () => {sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
-    sobreMimButtonMobile.addEventListener('click', () => {
-        modalMenuMobile.style.display = 'none'
-        sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'})
-    })
+    sobreMimButton.addEventListener('click', () => sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'}))
+    sobreMimButtonMobile.addEventListener('click', () => sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'}))
 
-    projetosButton.addEventListener('click', () => {projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
-        projetosButtonMobile.addEventListener('click', () => {
-        modalMenuMobile.style.display = 'none'
-        projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'})
-    })
+    projetosButton.addEventListener('click', () => projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'}))
+        projetosButtonMobile.addEventListener('click', () => projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'}))
 
     tecnologiasButton.addEventListener('click', () => {tecnologiasSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
-        tecnologiasButtonMobile.addEventListener('click', () => {
-        modalMenuMobile.style.display = 'none'
-        tecnologiasSection.scrollIntoView({behavior: 'smooth', block: 'start'})
-    })
+        tecnologiasButtonMobile.addEventListener('click', () => tecnologiasSection.scrollIntoView({behavior: 'smooth', block: 'start'}))
 
-    contatoButton.addEventListener('click', () => {contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
-        contatoButtonMobile.addEventListener('click', () => {
-        modalMenuMobile.style.display = 'none'
-        contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'})
-    })
+    contatoButton.addEventListener('click', () => contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'}))
+        contatoButtonMobile.addEventListener('click', () => contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'}))
 
 //Mantém o botão com a coloração de destaque na seção que estiver sendo exibida na tela
     sobreMimSection.addEventListener('mouseover', () =>{sobreMimButton.classList.toggle('is-focus')})
