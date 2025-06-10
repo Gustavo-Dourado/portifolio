@@ -28,16 +28,28 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
 
 //Cria navegação ao clicar nos respectivos botões do header
     sobreMimButton.addEventListener('click', () => {sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
-    sobreMimButtonMobile.addEventListener('click', () => {sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+    sobreMimButtonMobile.addEventListener('click', () => {
+        modalMenuMobile.style.display = 'none'
+        sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'})
+    })
 
     projetosButton.addEventListener('click', () => {projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
-    projetosButtonMobile.addEventListener('click', () => {projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+        projetosButtonMobile.addEventListener('click', () => {
+        modalMenuMobile.style.display = 'none'
+        projetosSection.scrollIntoView({behavior: 'smooth', block: 'start'})
+    })
 
     tecnologiasButton.addEventListener('click', () => {tecnologiasSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
-    tecnologiasButtonMobile.addEventListener('click', () => {tecnologiasSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+        tecnologiasButtonMobile.addEventListener('click', () => {
+        modalMenuMobile.style.display = 'none'
+        tecnologiasSection.scrollIntoView({behavior: 'smooth', block: 'start'})
+    })
 
     contatoButton.addEventListener('click', () => {contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
-    contatoButtonMobile.addEventListener('click', () => {contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'})})
+        contatoButtonMobile.addEventListener('click', () => {
+        modalMenuMobile.style.display = 'none'
+        contatoSection.scrollIntoView({behavior: 'smooth', block: 'start'})
+    })
 
 //Mantém o botão com a coloração de destaque na seção que estiver sendo exibida na tela
     sobreMimSection.addEventListener('mouseover', () =>{sobreMimButton.classList.toggle('is-focus')})
@@ -71,9 +83,6 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
         const titleProject = document.createElement('h3')
         titleProject.innerText = project.title
 
-        const projectImageContainer = document.createElement('div')
-        projectImageContainer.className = "project-image-container"
-
         const projectImage = document.createElement('img')
         projectImage.className = "preview"
         projectImage.id = project.img.id
@@ -90,10 +99,9 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
 
         projectsContainer.appendChild(divProject)
         divProject.appendChild(titleProject)
-        divProject.appendChild(projectImageContainer)
+        divProject.appendChild(projectImage)
         divProject.appendChild(descriptionProject)
         divProject.appendChild(linkProject)
-        projectImageContainer.appendChild(projectImage)
 
         //Inicializar o primeiro projeto como ativo
         if(project.id === 1)
