@@ -21,7 +21,6 @@ html{
 
 body{
     font-size: 1.6rem;
-    overflow-x: scroll;
 }
 
 .main-container, .nav-container{
