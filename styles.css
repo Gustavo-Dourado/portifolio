@@ -21,6 +21,7 @@ html{
 
 body{
     font-size: 1.6rem;
+    overflow-x: scroll;
 }
 
 .main-container, .nav-container{
@@ -32,7 +33,7 @@ body{
 }
 
 header{
-    width: 100%;
+    min-width: 100%;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -148,7 +149,7 @@ li figure{
 }
 
 .childs{
-    max-width: 100%;
+    min-width: 100%;
     min-height: 100dvh;
     display: flex;
     justify-content: center;
@@ -174,7 +175,7 @@ li figure{
 }
 
 #hero-div-container{
-    max-width: 92%;
+    width: 92%;
     height: 28em;
     display: flex;
     flex-direction: column;
@@ -185,7 +186,7 @@ li figure{
 h1{
     padding: 0 0.5em;
 
-    font-size: clamp(3.6rem, 6vw, 6rem);
+    font-size: clamp(3.0rem, 6vw, 6rem);
     font-weight: 700;
     color: var(--text-color);
 
@@ -198,7 +199,6 @@ h1{
 .arrows{
     width: 60px;
     height: 72px;
-    /* margin-top: 30%; */
 }
 
 .arrows path{
@@ -308,12 +308,14 @@ h1{
 }
 
 .social-text{
+    max-width: 37rem;
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem;
     border-radius: 15px;
     background-color: #D870D8;
     color: #fff;
@@ -387,6 +389,7 @@ h1{
 
 .back-arrow{
     transform: rotate(180deg);
+    cursor: pointer;
 }
 
 .projects-container{
@@ -549,7 +552,9 @@ textarea{
 }
 
 #send{
-    width: 25rem;
+    font-size: 1.6rem;
+    max-width: 43rem;
+    width: 75%;
     height: 6rem;
     border: none;
     border-radius: 8px;
@@ -654,6 +659,7 @@ footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
     }
 
     .description-project{

@@ -13,14 +13,14 @@ export const arrayProjectsPortifolio = [
 
     {   
         id: 2,
-        title: "Projeto Star Wars",
+        title: "Projeto NBA",
         img: {
-                id: "projeto-star-wars",
-                alt: "preview do site do projeto star wars",
-                src: "./assets/projects/star-wars-img.png"
+                id: "projeto-nba",
+                alt: "preview do site do projeto NBA",
+                src: "./assets/projects/nba-img.png"
         },
-        description: "Site que agrupa informações de Star Wars, como de personagens, filmes e planetas envolvidos nesta saga, os dados de Star wars são consumidos por uma API externa pública, o site é totalmente responsivo.",
-        link: "https://gustavo-dourado.github.io/Projeto-Star-Wars/"
+        description: "Site que agrupa algumas informações de todos os times da NBA, organizando em tabelas que podem ser filtradas, há também um mecanismo de busca para algum time específico.",
+        link: "https://gustavo-dourado.github.io/projetoNBA/"
     },
 
     {
@@ -31,8 +31,8 @@ export const arrayProjectsPortifolio = [
                 alt: "preview do site do projeto youtube clone",
                 src: "./assets/projects/youtube-img.png"
         },
-        description: "Site que simula o site do youtube, com retorno de videos da própria API do youtube, mas há também consumo de uma api criada com banco de dados de usuários bem como de vídeos associados aos mesmos.",
-        link: "#"
+        description: "Site que simula o site do youtube, com retorno de videos da própria API do youtube, bem como consumo de api própria para acesso a vídeos de usuários",
+        link: "https://github.com/Gustavo-Dourado/youtubeClone"
     },
 
     {

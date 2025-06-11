@@ -26,22 +26,21 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
     const tecnologiasSection = document.getElementById('technologies-section');
     const contatoSection = document.getElementById('contact-section');
 
-//Abre Modal do menu mobile
+//Abre e fecha Modal do menu mobile ao clicar no botao menu
     menuMobileButton.addEventListener('click', (e) => {
         e.stopPropagation() 
         modalMenuMobile.classList.toggle('open')
     })
 
 //Fechar MenuMobile
-    modalMenuMobile.addEventListener('click', () => modalMenuMobile.classList.toggle('open')) //Fechar ao clicar em qlqr lugar da seção modal
+    modalMenuMobile.addEventListener('click', () => modalMenuMobile.classList.remove('open')) //Fechar ao clicar em qlqr lugar da seção modal
     //Fechar modal ao clicar em qualquer lugar do body, caso o menu esteja aberto
     bodyElement[0].addEventListener('click', (e) => {
         e.stopPropagation()
         if(modalMenuMobile.classList.contains('open')){
             modalMenuMobile.classList.remove('open')
         }
-    })
-    
+    })   
 
 //Cria navegação ao clicar nos respectivos botões do header
     sobreMimButton.addEventListener('click', () => sobreMimSection.scrollIntoView({behavior: 'smooth', block: 'start'}))
@@ -100,7 +99,7 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
 
         const linkProject = document.createElement('span')
         linkProject.className = "link-project"
-        linkProject.innerHTML = `Clique <a target="_blank" href="${project.link}">aqui</a> para ver o projeto no gitHub`
+        linkProject.innerHTML = `Clique <a target="_blank" href="${project.link}">aqui</a> para ver o projeto`
 
         projectsContainer.appendChild(divProject)
         divProject.appendChild(titleProject)
@@ -110,7 +109,7 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
 
         //Inicializar o primeiro projeto como ativo
         if(project.id === 1)
-            divProject.classList.toggle("active")
+            divProject.classList.add("active")
     })
     
 // Slide entre projetos
@@ -137,7 +136,7 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
         }
     }
 
-    //Criar slide automático a cada 5 segundos ao carregar a página, somente quando estiver na section projects
+    //Começar slide automático a cada 5 segundos ao carregar a página, somente quando estiver na section projects
     projetosSection.addEventListener('mouseenter', startSlideProject)
     projetosSection.addEventListener('mouseleave', stopSlideProject)
 
@@ -146,14 +145,11 @@ import {arrayProjectsPortifolio} from "./modules/projects-array.js";
     let mouseEnterTimeout;
     const SLIDE_DELAY = 300; // milissegundos
 
-    projectsContainer.addEventListener('mouseenter', () => {
-        mouseEnterTimeout = setTimeout(stopSlideProject, SLIDE_DELAY);
-        }
-    );
+    projectsContainer.addEventListener('mouseenter', () => mouseEnterTimeout = setTimeout(stopSlideProject, SLIDE_DELAY));
 
     projectsContainer.addEventListener('mouseleave', () => {
-    clearTimeout(mouseEnterTimeout);
-    startSlideProject();
+        clearTimeout(mouseEnterTimeout);
+        startSlideProject();
     });
 
     //Pega as setas para navegar entre projetos
