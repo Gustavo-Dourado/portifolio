@@ -32,7 +32,7 @@ export const arrayProjectsPortifolio = [
                 src: "./assets/projects/youtube-img.png"
         },
         description: "Site que simula o site do youtube, com retorno de videos da própria API do youtube, bem como consumo de api própria para acesso a vídeos de usuários",
-        link: "https://github.com/Gustavo-Dourado/youtubeClone"
+        link: "https://github.com/Gustavo-Dourado/youtube_project"
     },
 
     {
